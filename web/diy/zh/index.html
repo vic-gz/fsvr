@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071728">
+  <meta name="description" content="Fist Strike VR 自定义课程完整教程：在 PC 上分析音乐、整理课程，通过 USB 导入 Quest 并开始训练。">
+  <meta property="og:title" content="Fist Strike VR 自定义课程教程">
+  <meta property="og:description" content="用自己的音乐创建拳击训练课程。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vic-gz.github.io/fsvr/diy/zh/">
+  <link rel="canonical" href="https://vic-gz.github.io/fsvr/diy/zh/">
+  <link rel="alternate" hreflang="en" href="https://vic-gz.github.io/fsvr/diy/">
+  <link rel="alternate" hreflang="zh-CN" href="https://vic-gz.github.io/fsvr/diy/zh/">
+  <link rel="stylesheet" href="../styles.css">
+  <noscript><style>.tab-panel[hidden]{display:block !important}.tab-list{display:none !important}</style></noscript>
+  <title>自定义课程教程 · Fist Strike VR</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到正文</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="返回页面顶部">
+      <span class="brand-mark" aria-hidden="true">FS</span>
+      <span>
+        <strong>Fist Strike VR</strong>
+        <small>自定义课程教程</small>
+      </span>
+    </a>
+    <nav class="header-actions" aria-label="页面操作">
+      <a class="button button-ghost desktop-action" href="../../zh/">游戏首页</a>
+      <a class="button button-ghost desktop-action" href="https://github.com/vic-gz/AllInOneInferPortable" target="_blank" rel="noopener noreferrer">PC 工具</a>
+      <a class="language-switch" href="../" lang="en" hreflang="en" aria-label="Switch to English">EN</a>
+      <a class="button button-primary" href="#quick-start">开始教程</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <span class="eyebrow">本机分析 · USB 导入 · 无需上传音乐</span>
+        <h1>用自己的音乐<br><span>创建拳击训练课程</span></h1>
+        <p>在 PC 上生成节拍分析文件，将音乐和 JSON 按课程整理后复制到 Quest。按本页从上到下操作，第一次也能顺利完成。</p>
+        <div class="hero-actions">
+          <a class="button button-primary button-large" href="#quick-start">查看 5 步流程</a>
+          <a class="button button-ghost button-large" href="#troubleshooting">遇到问题</a>
+        </div>
+        <ul class="hero-facts" aria-label="功能特点">
+          <li>Windows x64 / Apple Silicon Mac</li>
+          <li>Quest 2 / Quest 3 / Quest 3S</li>
+          <li>游戏支持 MP3、WAV、OGG</li>
+        </ul>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="hero-card">
+          <span class="hero-card-label">你的课程</span>
+          <strong>周末燃脂</strong>
+          <div class="waveform"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="hero-card-meta"><span>8 首</span><span>128–154 BPM</span><span>32 分钟</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-shell">
+      <aside class="toc" aria-label="教程目录">
+        <p class="toc-title">教程目录</p>
+        <a href="#quick-start">快速流程</a>
+        <a href="#prepare">准备工作</a>
+        <a href="#install">1. 安装 PC 工具</a>
+        <a href="#analyze">2. 分析音乐</a>
+        <a href="#organize">3. 整理课程目录</a>
+        <a href="#usb">4. USB 复制到 Quest</a>
+        <a href="#quest">5. 游戏内导入</a>
+        <a href="#update">更新已有课程</a>
+        <a href="#troubleshooting">故障排查</a>
+        <a href="#screenshots">截图清单</a>
+      </aside>
+
+      <article class="guide">
+        <section class="guide-section" id="quick-start">
+          <div class="section-heading">
+            <span class="section-kicker">先看全流程</span>
+            <h2>五步就能开始训练</h2>
+            <p>首次设置耗时主要在 PC 工具下载环境和模型。完成一次后，后续添加歌曲只需分析、复制和重新扫描。</p>
+          </div>
+          <ol class="flow-grid">
+            <li><span>01</span><strong>安装工具</strong><small>在 PC 上完成一次初始化</small></li>
+            <li><span>02</span><strong>分析音乐</strong><small>为每首歌生成同名 JSON</small></li>
+            <li><span>03</span><strong>整理课程</strong><small>一个课程对应一个文件夹</small></li>
+            <li><span>04</span><strong>USB 复制</strong><small>复制到 Quest 内部存储</small></li>
+            <li><span>05</span><strong>选择目录</strong><small>扫描课程并直接开练</small></li>
+          </ol>
+          <div class="callout callout-important">
+            <strong>最重要的规则</strong>
+            <p>每首音频必须和一个 <b>基础文件名完全相同</b>的 JSON 放在同一课程文件夹中。例如 <code>Song A.ogg</code> 对应 <code>Song A.json</code>。</p>
+          </div>
+        </section>
+
+        <section class="guide-section" id="prepare">
+          <div class="section-heading">
+            <span class="section-kicker">开始之前</span>
+            <h2>准备这些设备和空间</h2>
+          </div>
+          <div class="check-grid">
+            <div class="check-card"><span>✓</span><div><strong>一台兼容电脑</strong><p>Windows x64，或 Apple Silicon（M 系列）Mac。</p></div></div>
+            <div class="check-card"><span>✓</span><div><strong>支持数据传输的 USB 线</strong><p>仅能充电的线无法在电脑中显示 Quest 存储。</p></div></div>
+            <div class="check-card"><span>✓</span><div><strong>足够的电脑磁盘空间</strong><p>CPU/Mac 建议至少 6 GB，NVIDIA CUDA 建议至少 12 GB。</p></div></div>
+            <div class="check-card"><span>✓</span><div><strong>Quest 可用空间</strong><p>需要容纳原始音频，以及游戏首次扫描后生成的本地缓存。</p></div></div>
+          </div>
+          <div class="callout">
+            <strong>隐私说明</strong>
+            <p>PC 工具在你的电脑上读取和分析音频，Gradio 页面运行于 <code>127.0.0.1</code>。音乐不会因为使用该页面而上传到远程服务器。</p>
+          </div>
+        </section>
+
+        <section class="guide-section" id="install">
+          <div class="section-heading numbered-heading">
+            <span class="step-number">1</span>
+            <div><span class="section-kicker">PC 端</span><h2>下载并初始化分析工具</h2></div>
+          </div>
+
+          <h3>1.1 获取项目</h3>
+          <ol class="steps">
+            <li>打开 <a href="https://github.com/vic-gz/AllInOneInferPortable" target="_blank" rel="noopener noreferrer">AllInOneInferPortable 项目页</a>。</li>
+            <li>点击 <b>Code → Download ZIP</b>，下载后将压缩包完整解压到本机磁盘。</li>
+            <li>不要在压缩包预览窗口中直接运行脚本；初始化前先确定最终存放位置。</li>
+          </ol>
+          <figure class="shot-placeholder" data-shot="S01">
+            <div><span>S01</span><strong>待替换：GitHub 下载入口</strong><small>需要展示 Code → Download ZIP</small></div>
+            <figcaption>从 GitHub 下载并完整解压项目。</figcaption>
+          </figure>
+
+          <div class="platform-tabs" data-tabs>
+            <div class="tab-list" role="tablist" aria-label="选择电脑平台">
+              <button class="tab-button is-active" type="button" role="tab" aria-selected="true" data-tab="windows">Windows</button>
+              <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="macos">macOS</button>
+            </div>
+            <div class="tab-panel is-active" role="tabpanel" data-panel="windows">
+              <h3>1.2 Windows 首次初始化</h3>
+              <ol class="steps">
+                <li>双击 <code>platforms\windows\init.bat</code>。</li>
+                <li>Windows 请求管理员权限时选择“是”。</li>
+                <li>如果检测到 NVIDIA 显卡，按需求选择 CUDA 版；不确定时可以选择 CPU 版。</li>
+                <li>保持窗口开启，直到看到 <code>Setup complete</code>。</li>
+              </ol>
+              <div class="callout callout-warning"><strong>下载时间较长是正常的</strong><p>CPU 版通常下载约 1.5～2.5 GB，CUDA 版约 3～5 GB。首次分析还可能继续下载模型。</p></div>
+              <figure class="shot-placeholder" data-shot="S02">
+                <div><span>S02</span><strong>待替换：Windows 初始化完成</strong><small>需要同时看到所选运行版本与 Setup complete</small></div>
+                <figcaption>初始化窗口出现 Setup complete 后再关闭。</figcaption>
+              </figure>
+            </div>
+            <div class="tab-panel" role="tabpanel" data-panel="macos" hidden>
+              <h3>1.2 macOS 首次初始化</h3>
+              <p>仅支持 Apple Silicon（M 系列）Mac。在项目目录打开终端，执行：</p>
+              <div class="code-block"><pre><code>chmod +x platforms/macos/init.command platforms/macos/start.command
+./platforms/macos/init.command</code></pre><button class="copy-button" type="button" data-copy>复制</button></div>
+              <p>如果 Gatekeeper 阻止运行，可在 Finder 中右键 <code>init.command</code>，选择“打开”并确认一次。等待出现 <code>Setup complete</code>。</p>
+              <figure class="shot-placeholder" data-shot="S03">
+                <div><span>S03</span><strong>待替换：macOS 初始化完成</strong><small>需要展示终端命令与 Setup complete</small></div>
+                <figcaption>Apple Silicon Mac 会优先使用 MPS 加速。</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="guide-section" id="analyze">
+          <div class="section-heading numbered-heading">
+            <span class="step-number">2</span>
+            <div><span class="section-kicker">PC 端</span><h2>分析音乐并生成 JSON</h2></div>
+          </div>
+
+          <h3>2.1 启动本地页面</h3>
+          <div class="command-grid">
+            <div><span>Windows</span><code>platforms\windows\start.bat</code></div>
+            <div><span>macOS</span><code>platforms/macos/start.command</code></div>
+          </div>
+          <p>浏览器通常会自动打开 <a href="http://127.0.0.1:7860" target="_blank" rel="noopener noreferrer"><code>http://127.0.0.1:7860</code></a>。没有自动打开时可手动输入。关闭启动器窗口会停止本地服务。</p>
+
+          <h3>2.2 选择分析方式</h3>
+          <div class="choice-grid">
+            <div class="choice-card"><span>单首歌曲</span><h4>Single File</h4><ol><li>点击 Browse... 选择音频</li><li>点击 Start Analysis</li><li>等待状态显示完成</li></ol></div>
+            <div class="choice-card"><span>多首歌曲</span><h4>Directory</h4><ol><li>点击 Browse... 选择目录</li><li>选择是否递归子目录</li><li>点击 Start Directory Analysis</li></ol></div>
+          </div>
+          <figure class="shot-placeholder" data-shot="S04">
+            <div><span>S04</span><strong>待替换：音乐分析 Web 页面</strong><small>需要同时展示 Single File 与 Directory 入口</small></div>
+            <figcaption>选择最终要放入 Quest 的音频文件进行分析。</figcaption>
+          </figure>
+
+          <div class="callout callout-important">
+            <strong>PC 工具支持的格式不等于游戏支持的格式</strong>
+            <p>分析工具可读取 <code>WAV / FLAC / MP3 / OGG / M4A / AAC / WMA</code>，但当前 Quest 游戏只导入 <b>MP3、WAV、OGG</b>。如果原曲是其他格式，请先转换为这三种格式之一，再分析转换后的最终文件。</p>
+          </div>
+
+          <h3>2.3 找到生成结果</h3>
+          <p>每次任务会在以下位置创建一个带时间戳的结果目录：</p>
+          <div class="code-block"><pre><code>AllInOneInferPortable/
+└─ outputs/
+   └─ gradio/
+      └─ &lt;运行时间戳&gt;/
+         ├─ Song A.json
+         └─ Song B.json</code></pre><button class="copy-button" type="button" data-copy>复制</button></div>
+          <p>运行日志位于 <code>Portable/logs/</code>。如果分析失败，保留对应日志有助于排查。</p>
+          <figure class="shot-placeholder" data-shot="S05">
+            <div><span>S05</span><strong>待替换：分析完成与结果目录</strong><small>需要展示完成状态、JSON 下载区或 outputs/gradio 文件夹</small></div>
+            <figcaption>确认每首准备导入的歌曲都生成了同名 JSON。</figcaption>
+          </figure>
+        </section>
+
+        <section class="guide-section" id="organize">
+          <div class="section-heading numbered-heading">
+            <span class="step-number">3</span>
+            <div><span class="section-kicker">PC 端</span><h2>整理课程目录</h2></div>
+          </div>
+          <p>在 PC 上新建一个根目录，建议命名为 <code>FistStrikeSongs</code>。根目录中的每个一级子文件夹就是一个课程。</p>
+          <div class="tree-card" aria-label="正确的课程目录示例">
+            <pre><code>FistStrikeSongs/                 ← 游戏中选择这个根目录
+├─ 周末燃脂/                    ← 课程 1
+│  ├─ 01 - Artist A - Song A.ogg
+│  ├─ 01 - Artist A - Song A.json
+│  ├─ 02 - Artist B - Song B.mp3
+│  └─ 02 - Artist B - Song B.json
+└─ 慢速热身/                    ← 课程 2
+   ├─ 01 - Artist C - Song C.wav
+   └─ 01 - Artist C - Song C.json</code></pre>
+          </div>
+          <div class="rules-grid">
+            <div><b>一个课程一个文件夹</b><p>只扫描根目录下的一级子文件夹，不要再嵌套歌曲目录。</p></div>
+            <div><b>音频和 JSON 同名</b><p>扩展名之前的文件名必须相同，大小写也建议保持一致。</p></div>
+            <div><b>歌曲放在课程文件夹内</b><p>直接放在 FistStrikeSongs 根目录的歌曲不会被导入。</p></div>
+            <div><b>使用编号控制顺序</b><p>歌曲按文件名排序，可添加 <code>01 -</code>、<code>02 -</code> 前缀。</p></div>
+          </div>
+          <div class="compare-grid">
+            <div class="compare good"><span>正确</span><code>Morning Run.ogg</code><code>Morning Run.json</code></div>
+            <div class="compare bad"><span>错误</span><code>Morning Run.ogg</code><code>Morning_Run.json</code></div>
+          </div>
+          <div class="callout callout-warning"><strong>避免同基础文件名冲突</strong><p>同一课程里不要同时放置 <code>Song.mp3</code> 和 <code>Song.ogg</code>。它们会被视为重名音频，均无法导入。</p></div>
+        </section>
+
+        <section class="guide-section" id="usb">
+          <div class="section-heading numbered-heading">
+            <span class="step-number">4</span>
+            <div><span class="section-kicker">PC → Quest</span><h2>通过 USB 复制课程</h2></div>
+          </div>
+          <ol class="steps">
+            <li>使用支持数据传输的 USB 线连接 Quest 与电脑，并保持 Quest 解锁。</li>
+            <li>如果头显中出现文件访问提示，选择“允许”。</li>
+            <li>在电脑文件管理器中打开 Quest 内部共享存储。</li>
+            <li>进入 <code>Documents/FistStrikeVR/</code>；目录不存在时可手动创建。</li>
+            <li>将整个 <code>FistStrikeSongs</code> 文件夹复制进去，等待传输完成后再断开 USB。</li>
+          </ol>
+          <div class="tree-card compact" aria-label="Quest 内的目标目录">
+            <pre><code>Quest 内部存储/
+└─ Documents/
+   └─ FistStrikeVR/
+      └─ FistStrikeSongs/
+         ├─ 周末燃脂/
+         │  ├─ 01 - Artist A - Song A.ogg
+         │  └─ 01 - Artist A - Song A.json
+         └─ 慢速热身/
+            ├─ 01 - Artist C - Song C.wav
+            └─ 01 - Artist C - Song C.json</code></pre>
+          </div>
+          <figure class="shot-placeholder" data-shot="S06">
+            <div><span>S06</span><strong>待替换：PC 中的 Quest 目标目录</strong><small>需要展示 Documents/FistStrikeVR/FistStrikeSongs 完整面包屑</small></div>
+            <figcaption>复制的是整个根目录，不是单独的一首歌曲。</figcaption>
+          </figure>
+        </section>
+
+        <section class="guide-section" id="quest">
+          <div class="section-heading numbered-heading">
+            <span class="step-number">5</span>
+            <div><span class="section-kicker">Quest 游戏内</span><h2>选择目录并开始训练</h2></div>
+          </div>
+          <ol class="steps">
+            <li>启动 Fist Strike VR，进入“自定义课程”。</li>
+            <li>点击右上方“选择目录”。</li>
+            <li>在系统目录选择器中进入 <code>Documents/FistStrikeVR/FistStrikeSongs</code>。</li>
+            <li>停留在 <code>FistStrikeSongs</code> 根目录，点击“使用此文件夹”并允许访问。不要进入某个单独课程后再确认。</li>
+            <li>返回游戏等待扫描完成。出现课程卡片后，点击课程即可进入训练。</li>
+          </ol>
+          <figure class="shot-placeholder" data-shot="S07">
+            <div><span>S07</span><strong>待替换：Quest 系统目录选择器</strong><small>需要展示选中 FistStrikeSongs 与“使用此文件夹”按钮</small></div>
+            <figcaption>必须选择课程文件夹的上一层根目录。</figcaption>
+          </figure>
+          <figure class="shot-placeholder" data-shot="S08">
+            <div><span>S08</span><strong>待替换：游戏中的自定义课程列表</strong><small>需要展示导入帮助、选择目录、重新扫描和课程卡片</small></div>
+            <figcaption>课程卡片会显示可用歌曲数、时长和 BPM 范围。</figcaption>
+          </figure>
+          <div class="callout"><strong>首次扫描为什么较慢？</strong><p>游戏会读取分析 JSON，并将可用歌曲复制到应用缓存。后续未改动的歌曲会复用缓存；扫描过程中请不要退出游戏。</p></div>
+        </section>
+
+        <section class="guide-section" id="update">
+          <div class="section-heading">
+            <span class="section-kicker">后续维护</span>
+            <h2>增加、替换或移除歌曲</h2>
+          </div>
+          <ol class="steps">
+            <li>在 PC 上分析新歌曲，得到同名 JSON。</li>
+            <li>按相同规则放入已有课程，或新建一个一级课程文件夹。</li>
+            <li>通过 USB 将变化复制到 Quest，确认覆盖或删除对应文件。</li>
+            <li>回到“自定义课程”页面，点击“重新扫描”。</li>
+          </ol>
+          <p>如果更换了整个根目录，使用“选择目录”重新授权。只修改已有目录内容时，不需要再次选择目录。</p>
+        </section>
+
+        <section class="guide-section" id="troubleshooting">
+          <div class="section-heading">
+            <span class="section-kicker">问题处理</span>
+            <h2>常见问题与解决方法</h2>
+          </div>
+          <div class="faq-list">
+            <details open><summary>电脑中看不到 Quest 存储</summary><div><p>确认 USB 线支持数据传输；保持头显解锁；在头显内允许文件访问。仍不可见时更换 USB 端口或数据线后重新连接。</p></div></details>
+            <details><summary>游戏中一个课程都没有</summary><div><p>确认选择的是 <code>FistStrikeSongs</code> 根目录，其下至少有一个一级课程文件夹；歌曲不能直接放在根目录，也不会递归扫描更深层目录。</p></div></details>
+            <details><summary>提示缺少同名分析文件</summary><div><p>检查音频与 JSON 是否位于同一课程文件夹，并确保扩展名之前完全同名。例如 <code>Song.mp3</code> 必须对应 <code>Song.json</code>。</p></div></details>
+            <details><summary>提示音频格式不支持</summary><div><p>Quest 端当前只支持 MP3、WAV 和 OGG。请在 PC 上转换格式，并针对转换后的最终音频重新生成 JSON。</p></div></details>
+            <details><summary>分析 JSON 无效或歌曲无法使用</summary><div><p>删除旧 JSON，使用最新 PC 工具重新分析对应音频。不要手动改写 JSON 内容。若音频曾被替换，也应重新生成 JSON。</p></div></details>
+            <details><summary>同一课程出现文件名冲突</summary><div><p>不要让两个不同格式的音频使用相同基础文件名。分别重命名音频，并重新生成与新名称匹配的 JSON。</p></div></details>
+            <details><summary>扫描或缓存失败</summary><div><p>检查 Quest 可用空间，确保复制已完成，再重新扫描。必要时缩小单次课程规模并重试。</p></div></details>
+            <details><summary>PC 工具初始化或启动失败</summary><div><p>重新运行当前平台的初始化脚本，检查网络、磁盘空间和 <code>Portable/logs/</code>。Windows 的 WinError 5 请检查 UAC、Windows 安全中心和杀毒软件；macOS 权限问题可重新执行 <code>chmod +x platforms/macos/*.command</code>。</p></div></details>
+            <details><summary>MP3 在 PC 工具中解码失败</summary><div><p>安装 FFmpeg，或将音频转换为 WAV/OGG 后重新分析。不要从非官方网站单独下载 DLL。</p></div></details>
+          </div>
+        </section>
+
+        <section class="guide-section screenshot-section" id="screenshots">
+          <div class="section-heading">
+            <span class="section-kicker">内容维护</span>
+            <h2>待补充的正式截图</h2>
+            <p>页面中共放置 8 个截图占位。正式截图建议使用中文界面、隐藏私人文件名和设备序列号，并尽量保持 16:9。</p>
+          </div>
+          <div class="shot-list">
+            <span>S01 GitHub 下载入口</span><span>S02 Windows 初始化完成</span><span>S03 macOS 初始化完成</span><span>S04 音乐分析 Web 页面</span><span>S05 分析结果目录</span><span>S06 Quest USB 目标目录</span><span>S07 Quest 系统目录选择器</span><span>S08 游戏课程列表</span>
+          </div>
+        </section>
+
+        <section class="guide-section final-cta">
+          <span class="section-kicker">准备好了</span>
+          <h2>把喜欢的音乐变成下一次训练</h2>
+          <p>先用一首 MP3、WAV 或 OGG 完整走通流程，再批量制作课程，最容易定位问题。</p>
+          <div><a class="button button-primary button-large" href="#install">从安装工具开始</a><a class="button button-ghost button-large" href="#top">返回顶部</a></div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Fist Strike VR · 自定义课程教程</p>
+    <p><a href="https://github.com/vic-gz/AllInOneInferPortable" target="_blank" rel="noopener noreferrer">PC 分析工具</a><span>·</span><a href="#troubleshooting">故障排查</a></p>
+  </footer>
+
+  <script src="../app.js" defer></script>
+</body>
+</html>

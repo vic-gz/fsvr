@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071728">
+  <meta name="description" content="The complete Fist Strike VR custom course guide: analyze music on a computer, organize a course, copy it to Quest over USB, and start training.">
+  <meta property="og:title" content="Fist Strike VR Custom Course Guide">
+  <meta property="og:description" content="Turn your own music into a Fist Strike VR boxing workout.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vic-gz.github.io/fsvr/diy/">
+  <link rel="canonical" href="https://vic-gz.github.io/fsvr/diy/">
+  <link rel="alternate" hreflang="en" href="https://vic-gz.github.io/fsvr/diy/">
+  <link rel="alternate" hreflang="zh-CN" href="https://vic-gz.github.io/fsvr/diy/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://vic-gz.github.io/fsvr/diy/">
+  <link rel="stylesheet" href="./styles.css">
+  <noscript><style>.tab-panel[hidden]{display:block !important}.tab-list{display:none !important}</style></noscript>
+  <title>Custom Course Guide · Fist Strike VR</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Back to the top">
+      <span class="brand-mark" aria-hidden="true">FS</span>
+      <span><strong>Fist Strike VR</strong><small>Custom Course Guide</small></span>
+    </a>
+    <nav class="header-actions" aria-label="Page actions">
+      <a class="button button-ghost desktop-action" href="../">Game Home</a>
+      <a class="button button-ghost desktop-action" href="https://github.com/vic-gz/AllInOneInferPortable" target="_blank" rel="noopener noreferrer">PC Tool</a>
+      <a class="language-switch" href="./zh/" lang="zh-CN" hreflang="zh-CN" aria-label="切换到中文">中文</a>
+      <a class="button button-primary" href="#quick-start">Start Guide</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <span class="eyebrow">Local analysis · USB import · No music upload</span>
+        <h1>Your music.<br><span>Your workout.</span></h1>
+        <p>Generate beat analysis files on a computer, place each song and JSON into a course folder, then copy everything to Quest. Follow this page from top to bottom to complete your first import.</p>
+        <div class="hero-actions">
+          <a class="button button-primary button-large" href="#quick-start">See the 5-Step Flow</a>
+          <a class="button button-ghost button-large" href="#troubleshooting">Troubleshooting</a>
+        </div>
+        <ul class="hero-facts" aria-label="Requirements">
+          <li>Windows x64 / Apple Silicon Mac</li>
+          <li>Meta Quest</li>
+          <li>MP3, WAV, and OGG in game</li>
+        </ul>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-card">
+          <span class="hero-card-label">YOUR COURSE</span><strong>Weekend Burn</strong>
+          <div class="waveform"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="hero-card-meta"><span>8 tracks</span><span>128–154 BPM</span><span>32 min</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-shell">
+      <aside class="toc" aria-label="Guide contents">
+        <p class="toc-title">ON THIS PAGE</p>
+        <a href="#quick-start">Quick Start</a><a href="#prepare">Before You Start</a>
+        <a href="#install">1. Install the PC Tool</a><a href="#analyze">2. Analyze Music</a>
+        <a href="#organize">3. Organize the Course</a><a href="#usb">4. Copy over USB</a>
+        <a href="#quest">5. Import in Game</a><a href="#update">Update a Course</a>
+        <a href="#troubleshooting">Troubleshooting</a><a href="#screenshots">Screenshot List</a>
+      </aside>
+
+      <article class="guide">
+        <section class="guide-section" id="quick-start">
+          <div class="section-heading">
+            <span class="section-kicker">The whole process</span><h2>Five steps to your first workout</h2>
+            <p>The first setup takes the longest because the PC tool downloads its environment and models. After that, adding music only requires analysis, copying, and a rescan.</p>
+          </div>
+          <ol class="flow-grid">
+            <li><span>01</span><strong>Install</strong><small>Initialize the PC tool once</small></li>
+            <li><span>02</span><strong>Analyze</strong><small>Generate a matching JSON per song</small></li>
+            <li><span>03</span><strong>Organize</strong><small>One folder becomes one course</small></li>
+            <li><span>04</span><strong>Copy</strong><small>Transfer the root folder over USB</small></li>
+            <li><span>05</span><strong>Select</strong><small>Scan the folder and start training</small></li>
+          </ol>
+          <div class="callout callout-important"><strong>The most important rule</strong><p>Every audio file must have a JSON with the <b>exact same base name</b> in the same course folder. For example, <code>Song A.ogg</code> pairs with <code>Song A.json</code>.</p></div>
+        </section>
+
+        <section class="guide-section" id="prepare">
+          <div class="section-heading"><span class="section-kicker">Before you start</span><h2>Prepare the equipment and space</h2></div>
+          <div class="check-grid">
+            <div class="check-card"><span>✓</span><div><strong>A compatible computer</strong><p>Windows x64, or an Apple Silicon (M-series) Mac.</p></div></div>
+            <div class="check-card"><span>✓</span><div><strong>A data-capable USB cable</strong><p>A charge-only cable cannot expose Quest storage to the computer.</p></div></div>
+            <div class="check-card"><span>✓</span><div><strong>Enough computer storage</strong><p>Allow at least 6 GB for CPU/Mac or 12 GB for NVIDIA CUDA.</p></div></div>
+            <div class="check-card"><span>✓</span><div><strong>Enough free space on Quest</strong><p>Quest stores the source audio and creates a local cache during the first scan.</p></div></div>
+          </div>
+          <div class="callout"><strong>Privacy note</strong><p>The PC tool reads and analyzes audio on your computer. Its Gradio page runs at <code>127.0.0.1</code>; using it does not upload your music to a remote server.</p></div>
+        </section>
+
+        <section class="guide-section" id="install">
+          <div class="section-heading numbered-heading"><span class="step-number">1</span><div><span class="section-kicker">On your computer</span><h2>Download and initialize the analysis tool</h2></div></div>
+          <h3>1.1 Download the project</h3>
+          <ol class="steps">
+            <li>Open the <a href="https://github.com/vic-gz/AllInOneInferPortable" target="_blank" rel="noopener noreferrer">AllInOneInferPortable project</a>.</li>
+            <li>Select <b>Code → Download ZIP</b>, then fully extract the archive to a local drive.</li>
+            <li>Do not run scripts inside the ZIP preview. Move the extracted folder to its final location before initialization.</li>
+          </ol>
+          <figure class="shot-placeholder" data-shot="S01"><div><span>S01</span><strong>Placeholder: GitHub download menu</strong><small>Show Code → Download ZIP</small></div><figcaption>Download the project from GitHub and fully extract it.</figcaption></figure>
+
+          <div class="platform-tabs" data-tabs>
+            <div class="tab-list" role="tablist" aria-label="Choose a computer platform">
+              <button class="tab-button is-active" type="button" role="tab" aria-selected="true" data-tab="windows">Windows</button>
+              <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="macos">macOS</button>
+            </div>
+            <div class="tab-panel is-active" role="tabpanel" data-panel="windows">
+              <h3>1.2 First-time setup on Windows</h3>
+              <ol class="steps">
+                <li>Double-click <code>platforms\windows\init.bat</code>.</li>
+                <li>Select “Yes” if Windows requests administrator permission.</li>
+                <li>If an NVIDIA GPU is detected, choose CUDA when appropriate. Choose CPU if you are unsure.</li>
+                <li>Keep the window open until it displays <code>Setup complete</code>.</li>
+              </ol>
+              <div class="callout callout-warning"><strong>A long download is normal</strong><p>The CPU package typically downloads about 1.5–2.5 GB; CUDA about 3–5 GB. The first analysis may also download model files.</p></div>
+              <figure class="shot-placeholder" data-shot="S02"><div><span>S02</span><strong>Placeholder: Windows setup complete</strong><small>Show the selected backend and Setup complete</small></div><figcaption>Wait for Setup complete before closing the window.</figcaption></figure>
+            </div>
+            <div class="tab-panel" role="tabpanel" data-panel="macos" hidden>
+              <h3>1.2 First-time setup on macOS</h3>
+              <p>Only Apple Silicon (M-series) Macs are supported. Open Terminal in the project folder and run:</p>
+              <div class="code-block"><pre><code>chmod +x platforms/macos/init.command platforms/macos/start.command
+./platforms/macos/init.command</code></pre><button class="copy-button" type="button" data-copy>Copy</button></div>
+              <p>If Gatekeeper blocks the script, right-click <code>init.command</code> in Finder, select “Open,” and confirm once. Wait for <code>Setup complete</code>.</p>
+              <figure class="shot-placeholder" data-shot="S03"><div><span>S03</span><strong>Placeholder: macOS setup complete</strong><small>Show the Terminal command and Setup complete</small></div><figcaption>Apple Silicon Macs use MPS acceleration when available.</figcaption></figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="guide-section" id="analyze">
+          <div class="section-heading numbered-heading"><span class="step-number">2</span><div><span class="section-kicker">On your computer</span><h2>Analyze music and generate JSON</h2></div></div>
+          <h3>2.1 Start the local web page</h3>
+          <div class="command-grid"><div><span>Windows</span><code>platforms\windows\start.bat</code></div><div><span>macOS</span><code>platforms/macos/start.command</code></div></div>
+          <p>Your browser normally opens <a href="http://127.0.0.1:7860" target="_blank" rel="noopener noreferrer"><code>http://127.0.0.1:7860</code></a> automatically. Enter it manually if needed. Closing the launcher window stops the local service.</p>
+          <h3>2.2 Choose an analysis mode</h3>
+          <div class="choice-grid">
+            <div class="choice-card"><span>ONE SONG</span><h4>Single File</h4><ol><li>Select Browse... and choose audio</li><li>Select Start Analysis</li><li>Wait for the completed status</li></ol></div>
+            <div class="choice-card"><span>MULTIPLE SONGS</span><h4>Directory</h4><ol><li>Select Browse... and choose a folder</li><li>Choose whether to include subfolders</li><li>Select Start Directory Analysis</li></ol></div>
+          </div>
+          <figure class="shot-placeholder" data-shot="S04"><div><span>S04</span><strong>Placeholder: music analysis web page</strong><small>Show the Single File and Directory entry points</small></div><figcaption>Analyze the final audio file that you will copy to Quest.</figcaption></figure>
+          <div class="callout callout-important"><strong>PC input formats are not the same as in-game formats</strong><p>The analysis tool can read <code>WAV / FLAC / MP3 / OGG / M4A / AAC / WMA</code>, but Quest currently imports only <b>MP3, WAV, and OGG</b>. Convert other formats first, then analyze the final converted file.</p></div>
+          <h3>2.3 Find the results</h3>
+          <p>Each run creates a timestamped folder here:</p>
+          <div class="code-block"><pre><code>AllInOneInferPortable/
+└─ outputs/
+   └─ gradio/
+      └─ &lt;run timestamp&gt;/
+         ├─ Song A.json
+         └─ Song B.json</code></pre><button class="copy-button" type="button" data-copy>Copy</button></div>
+          <p>Runtime logs are stored in <code>Portable/logs/</code>. Keep the relevant log if an analysis fails.</p>
+          <figure class="shot-placeholder" data-shot="S05"><div><span>S05</span><strong>Placeholder: completed analysis and output folder</strong><small>Show the completed status, JSON output, or outputs/gradio folder</small></div><figcaption>Confirm that every song you plan to import has a matching JSON.</figcaption></figure>
+        </section>
+
+        <section class="guide-section" id="organize">
+          <div class="section-heading numbered-heading"><span class="step-number">3</span><div><span class="section-kicker">On your computer</span><h2>Organize the course folders</h2></div></div>
+          <p>Create a root folder on your computer named <code>FistStrikeSongs</code>. Every direct child folder becomes one course in the game.</p>
+          <div class="tree-card" aria-label="Correct course folder example"><pre><code>FistStrikeSongs/                 ← Select this root folder in game
+├─ Weekend Burn/                ← Course 1
+│  ├─ 01 - Artist A - Song A.ogg
+│  ├─ 01 - Artist A - Song A.json
+│  ├─ 02 - Artist B - Song B.mp3
+│  └─ 02 - Artist B - Song B.json
+└─ Slow Warm-up/                ← Course 2
+   ├─ 01 - Artist C - Song C.wav
+   └─ 01 - Artist C - Song C.json</code></pre></div>
+          <div class="rules-grid">
+            <div><b>One course per folder</b><p>Only direct child folders are scanned. Do not nest another song folder inside a course.</p></div>
+            <div><b>Audio and JSON must match</b><p>The filenames before their extensions must be identical. Matching case is recommended.</p></div>
+            <div><b>Put songs inside a course</b><p>Audio placed directly in the FistStrikeSongs root is not imported.</p></div>
+            <div><b>Use numbers to control order</b><p>Songs are sorted by filename. Prefix names with <code>01 -</code>, <code>02 -</code>, and so on.</p></div>
+          </div>
+          <div class="compare-grid"><div class="compare good"><span>CORRECT</span><code>Morning Run.ogg</code><code>Morning Run.json</code></div><div class="compare bad"><span>INCORRECT</span><code>Morning Run.ogg</code><code>Morning_Run.json</code></div></div>
+          <div class="callout callout-warning"><strong>Avoid duplicate base names</strong><p>Do not place <code>Song.mp3</code> and <code>Song.ogg</code> in the same course. They are treated as duplicate audio and neither is imported.</p></div>
+        </section>
+
+        <section class="guide-section" id="usb">
+          <div class="section-heading numbered-heading"><span class="step-number">4</span><div><span class="section-kicker">Computer → Quest</span><h2>Copy the course over USB</h2></div></div>
+          <ol class="steps">
+            <li>Connect Quest to your computer with a data-capable USB cable and keep the headset unlocked.</li>
+            <li>If a file access prompt appears in the headset, select “Allow.”</li>
+            <li>Open Quest internal shared storage in the computer's file manager.</li>
+            <li>Open <code>Documents/FistStrikeVR/</code>. Create the folders manually if they do not exist.</li>
+            <li>Copy the entire <code>FistStrikeSongs</code> folder into it. Wait for the transfer to finish before disconnecting USB.</li>
+          </ol>
+          <div class="tree-card compact" aria-label="Target folder on Quest"><pre><code>Quest internal storage/
+└─ Documents/
+   └─ FistStrikeVR/
+      └─ FistStrikeSongs/
+         ├─ Weekend Burn/
+         │  ├─ 01 - Artist A - Song A.ogg
+         │  └─ 01 - Artist A - Song A.json
+         └─ Slow Warm-up/
+            ├─ 01 - Artist C - Song C.wav
+            └─ 01 - Artist C - Song C.json</code></pre></div>
+          <figure class="shot-placeholder" data-shot="S06"><div><span>S06</span><strong>Placeholder: Quest destination on the computer</strong><small>Show the full Documents/FistStrikeVR/FistStrikeSongs breadcrumb</small></div><figcaption>Copy the complete root folder, not a single song.</figcaption></figure>
+        </section>
+
+        <section class="guide-section" id="quest">
+          <div class="section-heading numbered-heading"><span class="step-number">5</span><div><span class="section-kicker">Inside Quest</span><h2>Select the folder and start training</h2></div></div>
+          <ol class="steps">
+            <li>Start Fist Strike VR and open “Custom Courses.”</li>
+            <li>Select “Choose Folder” in the upper-right area.</li>
+            <li>In the system folder picker, open <code>Documents/FistStrikeVR/FistStrikeSongs</code>.</li>
+            <li>Stay at the <code>FistStrikeSongs</code> root and select “Use this folder,” then allow access. Do not enter one individual course before confirming.</li>
+            <li>Return to the game and wait for the scan. Select a course card to start training.</li>
+          </ol>
+          <figure class="shot-placeholder" data-shot="S07"><div><span>S07</span><strong>Placeholder: Quest system folder picker</strong><small>Show FistStrikeSongs selected and the Use this folder action</small></div><figcaption>Select the parent folder that contains all course folders.</figcaption></figure>
+          <figure class="shot-placeholder" data-shot="S08"><div><span>S08</span><strong>Placeholder: Custom Courses in game</strong><small>Show Import Help, Choose Folder, Rescan, and a course card</small></div><figcaption>Course cards display available songs, duration, and BPM range.</figcaption></figure>
+          <div class="callout"><strong>Why can the first scan take longer?</strong><p>The game reads each analysis JSON and copies valid songs into the app cache. Unchanged songs reuse that cache on later scans. Do not quit the game while a scan is running.</p></div>
+        </section>
+
+        <section class="guide-section" id="update">
+          <div class="section-heading"><span class="section-kicker">Later changes</span><h2>Add, replace, or remove songs</h2></div>
+          <ol class="steps"><li>Analyze each new song on the computer and collect its matching JSON.</li><li>Add the pair to an existing course or create a new direct child course folder.</li><li>Copy the changes to Quest over USB, confirming replacements or deletions as needed.</li><li>Return to Custom Courses and select “Rescan.”</li></ol>
+          <p>Use “Choose Folder” again if you replace the entire root folder. Changes inside the currently authorized folder only require a rescan.</p>
+        </section>
+
+        <section class="guide-section" id="troubleshooting">
+          <div class="section-heading"><span class="section-kicker">Fix a problem</span><h2>Common issues</h2></div>
+          <div class="faq-list">
+            <details open><summary>Quest storage does not appear on the computer</summary><div><p>Confirm that the USB cable supports data, keep the headset unlocked, and allow file access inside Quest. If it still does not appear, reconnect with a different USB port or cable.</p></div></details>
+            <details><summary>No courses appear in the game</summary><div><p>Confirm that you selected the <code>FistStrikeSongs</code> root and that it contains at least one direct child course folder. Songs at the root and deeper nested folders are not scanned.</p></div></details>
+            <details><summary>The game reports a missing analysis file</summary><div><p>Audio and JSON must be in the same course folder with exactly matching base names. For example, <code>Song.mp3</code> must pair with <code>Song.json</code>.</p></div></details>
+            <details><summary>The audio format is unsupported</summary><div><p>Quest currently supports MP3, WAV, and OGG. Convert the source audio to one of these formats, then generate a new JSON from the converted file.</p></div></details>
+            <details><summary>The analysis JSON is invalid or the song is unavailable</summary><div><p>Delete the old JSON and analyze the audio again with the latest PC tool. Do not edit JSON manually. Generate a new JSON whenever the audio file changes.</p></div></details>
+            <details><summary>A course contains a filename conflict</summary><div><p>Two audio files cannot share one base name, even with different formats. Rename the audio files and generate new matching JSON files.</p></div></details>
+            <details><summary>The scan or cache operation fails</summary><div><p>Check free space on Quest, confirm the USB copy completed, and scan again. If needed, test with a smaller course first.</p></div></details>
+            <details><summary>The PC tool does not initialize or start</summary><div><p>Run the platform's initialization script again, then check your network, disk space, and <code>Portable/logs/</code>. For WinError 5, check UAC, Windows Security, and antivirus software. On macOS, run <code>chmod +x platforms/macos/*.command</code> again.</p></div></details>
+            <details><summary>MP3 decoding fails in the PC tool</summary><div><p>Install FFmpeg, or convert the audio to WAV/OGG before analyzing it. Do not download individual DLL files from unofficial websites.</p></div></details>
+          </div>
+        </section>
+
+        <section class="guide-section screenshot-section" id="screenshots">
+          <div class="section-heading"><span class="section-kicker">Page maintenance</span><h2>Production screenshots still needed</h2><p>This page contains eight screenshot placeholders. Use a consistent UI language, hide private filenames and device serial numbers, and capture close to 16:9 where possible.</p></div>
+          <div class="shot-list"><span>S01 GitHub download menu</span><span>S02 Windows setup complete</span><span>S03 macOS setup complete</span><span>S04 Music analysis web page</span><span>S05 Analysis output folder</span><span>S06 Quest USB destination</span><span>S07 Quest system folder picker</span><span>S08 In-game course list</span></div>
+        </section>
+
+        <section class="guide-section final-cta">
+          <span class="section-kicker">You are ready</span><h2>Turn a favorite track into your next workout</h2>
+          <p>Start with one MP3, WAV, or OGG and complete the full flow before building a larger course. That makes any problem much easier to isolate.</p>
+          <div><a class="button button-primary button-large" href="#install">Start with the PC Tool</a><a class="button button-ghost button-large" href="#top">Back to Top</a></div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Fist Strike VR · Custom Course Guide</p>
+    <p><a href="../">Game Home</a><span>·</span><a href="https://github.com/vic-gz/AllInOneInferPortable" target="_blank" rel="noopener noreferrer">PC Analysis Tool</a><span>·</span><a href="#troubleshooting">Troubleshooting</a></p>
+  </footer>
+  <script src="./app.js" defer></script>
+</body>
+</html>
