@@ -66,7 +66,7 @@
         <a href="#install">1. Install the PC Tool</a><a href="#analyze">2. Analyze Music</a>
         <a href="#organize">3. Organize the Course</a><a href="#usb">4. Copy over USB</a>
         <a href="#quest">5. Import in Game</a><a href="#update">Update a Course</a>
-        <a href="#troubleshooting">Troubleshooting</a><a href="#screenshots">Screenshot List</a>
+        <a href="#troubleshooting">Troubleshooting</a>
       </aside>
 
       <article class="guide">
@@ -104,7 +104,7 @@
             <li>Select <b>Code → Download ZIP</b>, then fully extract the archive to a local drive.</li>
             <li>Do not run scripts inside the ZIP preview. Move the extracted folder to its final location before initialization.</li>
           </ol>
-          <figure class="shot-placeholder" data-shot="S01"><div><span>S01</span><strong>Placeholder: GitHub download menu</strong><small>Show Code → Download ZIP</small></div><figcaption>Download the project from GitHub and fully extract it.</figcaption></figure>
+          <figure class="guide-shot" data-shot="S01"><img src="./images/S01.jpg" alt="GitHub Code menu showing the Download ZIP option" loading="lazy" decoding="async"><figcaption>Download the project from GitHub and fully extract it.</figcaption></figure>
 
           <div class="platform-tabs" data-tabs>
             <div class="tab-list" role="tablist" aria-label="Choose a computer platform">
@@ -120,7 +120,7 @@
                 <li>Keep the window open until it displays <code>Setup complete</code>.</li>
               </ol>
               <div class="callout callout-warning"><strong>A long download is normal</strong><p>The CPU package typically downloads about 1.5–2.5 GB; CUDA about 3–5 GB. The first analysis may also download model files.</p></div>
-              <figure class="shot-placeholder" data-shot="S02"><div><span>S02</span><strong>Placeholder: Windows setup complete</strong><small>Show the selected backend and Setup complete</small></div><figcaption>Wait for Setup complete before closing the window.</figcaption></figure>
+              <figure class="guide-shot" data-shot="S02"><img src="./images/S02.jpg" alt="Windows initialization window showing the selected backend and Setup complete" loading="lazy" decoding="async"><figcaption>Wait for Setup complete before closing the window.</figcaption></figure>
             </div>
             <div class="tab-panel" role="tabpanel" data-panel="macos" hidden>
               <h3>1.2 First-time setup on macOS</h3>
@@ -128,7 +128,7 @@
               <div class="code-block"><pre><code>chmod +x platforms/macos/init.command platforms/macos/start.command
 ./platforms/macos/init.command</code></pre><button class="copy-button" type="button" data-copy>Copy</button></div>
               <p>If Gatekeeper blocks the script, right-click <code>init.command</code> in Finder, select “Open,” and confirm once. Wait for <code>Setup complete</code>.</p>
-              <figure class="shot-placeholder" data-shot="S03"><div><span>S03</span><strong>Placeholder: macOS setup complete</strong><small>Show the Terminal command and Setup complete</small></div><figcaption>Apple Silicon Macs use MPS acceleration when available.</figcaption></figure>
+              <figure class="guide-shot" data-shot="S03"><img src="./images/S03.jpg" alt="macOS Terminal showing the initialization command and Setup complete" loading="lazy" decoding="async"><figcaption>Apple Silicon Macs use MPS acceleration when available.</figcaption></figure>
             </div>
           </div>
         </section>
@@ -143,7 +143,7 @@
             <div class="choice-card"><span>ONE SONG</span><h4>Single File</h4><ol><li>Select Browse... and choose audio</li><li>Select Start Analysis</li><li>Wait for the completed status</li></ol></div>
             <div class="choice-card"><span>MULTIPLE SONGS</span><h4>Directory</h4><ol><li>Select Browse... and choose a folder</li><li>Choose whether to include subfolders</li><li>Select Start Directory Analysis</li></ol></div>
           </div>
-          <figure class="shot-placeholder" data-shot="S04"><div><span>S04</span><strong>Placeholder: music analysis web page</strong><small>Show the Single File and Directory entry points</small></div><figcaption>Analyze the final audio file that you will copy to Quest.</figcaption></figure>
+          <figure class="guide-shot" data-shot="S04"><img src="./images/S04.jpg" alt="Music analysis web page with Single File and Directory analysis options" loading="lazy" decoding="async"><figcaption>Analyze the final audio file that you will copy to Quest.</figcaption></figure>
           <div class="callout callout-important"><strong>PC input formats are not the same as in-game formats</strong><p>The analysis tool can read <code>WAV / FLAC / MP3 / OGG / M4A / AAC / WMA</code>, but Quest currently imports only <b>MP3, WAV, and OGG</b>. Convert other formats first, then analyze the final converted file.</p></div>
           <h3>2.3 Find the results</h3>
           <p>Each run creates a timestamped folder here:</p>
@@ -158,7 +158,7 @@
             <strong>If the portable tool cannot complete the analysis</strong>
             <p>You can use the upstream <a href="https://github.com/openmirlab/all-in-one-infer#readme" target="_blank" rel="noopener noreferrer">openmirlab/all-in-one-infer project</a> to analyze the music and generate beat data instead. Follow that project's README for environment setup, analysis, and output instructions.</p>
           </div>
-          <figure class="shot-placeholder" data-shot="S05"><div><span>S05</span><strong>Placeholder: completed analysis and output folder</strong><small>Show the completed status, JSON output, or outputs/gradio folder</small></div><figcaption>Confirm that every song you plan to import has a matching JSON.</figcaption></figure>
+          <figure class="guide-shot" data-shot="S05"><img src="./images/S05.jpg" alt="Completed music analysis with generated JSON results" loading="lazy" decoding="async"><figcaption>Confirm that every song you plan to import has a matching JSON.</figcaption></figure>
         </section>
 
         <section class="guide-section" id="organize">
@@ -202,7 +202,7 @@
          └─ Slow Warm-up/
             ├─ 01 - Artist C - Song C.wav
             └─ 01 - Artist C - Song C.json</code></pre></div>
-          <figure class="shot-placeholder" data-shot="S06"><div><span>S06</span><strong>Placeholder: Quest destination on the computer</strong><small>Show the full Documents/FistStrikeVR/FistStrikeSongs breadcrumb</small></div><figcaption>Copy the complete root folder, not a single song.</figcaption></figure>
+          <figure class="guide-shot" data-shot="S06"><img src="./images/S06.jpg" alt="Quest storage on the computer at Documents, FistStrikeVR, FistStrikeSongs" loading="lazy" decoding="async"><figcaption>Copy the complete root folder, not a single song.</figcaption></figure>
         </section>
 
         <section class="guide-section" id="quest">
@@ -214,8 +214,8 @@
             <li>Stay at the <code>FistStrikeSongs</code> root and select “Use this folder,” then allow access. Do not enter one individual course before confirming.</li>
             <li>Return to the game and wait for the scan. Select a course card to start training.</li>
           </ol>
-          <figure class="shot-placeholder" data-shot="S07"><div><span>S07</span><strong>Placeholder: Quest system folder picker</strong><small>Show FistStrikeSongs selected and the Use this folder action</small></div><figcaption>Select the parent folder that contains all course folders.</figcaption></figure>
-          <figure class="shot-placeholder" data-shot="S08"><div><span>S08</span><strong>Placeholder: Custom Courses in game</strong><small>Show Import Help, Choose Folder, Rescan, and a course card</small></div><figcaption>Course cards display available songs, duration, and BPM range.</figcaption></figure>
+          <figure class="guide-shot" data-shot="S07"><img src="./images/S07.jpg" alt="Quest system folder picker with FistStrikeSongs selected and the Use this folder action" loading="lazy" decoding="async"><figcaption>Select the parent folder that contains all course folders.</figcaption></figure>
+          <figure class="guide-shot" data-shot="S08"><img src="./images/S08.jpg" alt="Fist Strike VR Custom Courses page showing import actions and a course card" loading="lazy" decoding="async"><figcaption>Course cards display available songs, duration, and BPM range.</figcaption></figure>
           <div class="callout"><strong>Why can the first scan take longer?</strong><p>The game reads each analysis JSON and copies valid songs into the app cache. Unchanged songs reuse that cache on later scans. Do not quit the game while a scan is running.</p></div>
         </section>
 
@@ -235,14 +235,10 @@
             <details><summary>The analysis JSON is invalid or the song is unavailable</summary><div><p>Delete the old JSON and analyze the audio again with the latest PC tool. Do not edit JSON manually. Generate a new JSON whenever the audio file changes.</p></div></details>
             <details><summary>A course contains a filename conflict</summary><div><p>Two audio files cannot share one base name, even with different formats. Rename the audio files and generate new matching JSON files.</p></div></details>
             <details><summary>The scan or cache operation fails</summary><div><p>Check free space on Quest, confirm the USB copy completed, and scan again. If needed, test with a smaller course first.</p></div></details>
+            <details><summary>The analysis page shows “Analysis failed (exit code 1)” or WinError 5</summary><div><p>If the error looks like the example below, first close the PC analysis tool, delete the <code>Portable/models</code> folder inside the tool directory, then restart the tool and analyze the music again. The model files will be downloaded again, so keep the computer online and wait for the download to finish.</p><figure class="troubleshooting-shot"><img src="./images/error1.jpg" alt="Analysis page showing Analysis failed (exit code 1) with PermissionError and WinError 5 in the runtime log"><figcaption>For this type of model-cache access error, try deleting <code>Portable/models</code> before analyzing again.</figcaption></figure></div></details>
             <details><summary>The PC tool does not initialize or start</summary><div><p>Run the platform's initialization script again, then check your network, disk space, and <code>Portable/logs/</code>. For WinError 5, check UAC, Windows Security, and antivirus software. On macOS, run <code>chmod +x platforms/macos/*.command</code> again.</p></div></details>
             <details><summary>MP3 decoding fails in the PC tool</summary><div><p>Install FFmpeg, or convert the audio to WAV/OGG before analyzing it. Do not download individual DLL files from unofficial websites.</p></div></details>
           </div>
-        </section>
-
-        <section class="guide-section screenshot-section" id="screenshots">
-          <div class="section-heading"><span class="section-kicker">Page maintenance</span><h2>Production screenshots still needed</h2><p>This page contains eight screenshot placeholders. Use a consistent UI language, hide private filenames and device serial numbers, and capture close to 16:9 where possible.</p></div>
-          <div class="shot-list"><span>S01 GitHub download menu</span><span>S02 Windows setup complete</span><span>S03 macOS setup complete</span><span>S04 Music analysis web page</span><span>S05 Analysis output folder</span><span>S06 Quest USB destination</span><span>S07 Quest system folder picker</span><span>S08 In-game course list</span></div>
         </section>
 
         <section class="guide-section final-cta">

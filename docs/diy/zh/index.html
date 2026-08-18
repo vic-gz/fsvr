@@ -75,7 +75,6 @@
         <a href="#quest">5. 游戏内导入</a>
         <a href="#update">更新已有课程</a>
         <a href="#troubleshooting">故障排查</a>
-        <a href="#screenshots">截图清单</a>
       </aside>
 
       <article class="guide">
@@ -127,8 +126,8 @@
             <li>点击 <b>Code → Download ZIP</b>，下载后将压缩包完整解压到本机磁盘。</li>
             <li>不要在压缩包预览窗口中直接运行脚本；初始化前先确定最终存放位置。</li>
           </ol>
-          <figure class="shot-placeholder" data-shot="S01">
-            <div><span>S01</span><strong>待替换：GitHub 下载入口</strong><small>需要展示 Code → Download ZIP</small></div>
+          <figure class="guide-shot" data-shot="S01">
+            <img src="../images/S01.jpg" alt="GitHub Code 菜单中的 Download ZIP 下载入口" loading="lazy" decoding="async">
             <figcaption>从 GitHub 下载并完整解压项目。</figcaption>
           </figure>
 
@@ -146,8 +145,8 @@
                 <li>保持窗口开启，直到看到 <code>Setup complete</code>。</li>
               </ol>
               <div class="callout callout-warning"><strong>下载时间较长是正常的</strong><p>CPU 版通常下载约 1.5～2.5 GB，CUDA 版约 3～5 GB。首次分析还可能继续下载模型。</p></div>
-              <figure class="shot-placeholder" data-shot="S02">
-                <div><span>S02</span><strong>待替换：Windows 初始化完成</strong><small>需要同时看到所选运行版本与 Setup complete</small></div>
+              <figure class="guide-shot" data-shot="S02">
+                <img src="../images/S02.jpg" alt="Windows 初始化窗口显示所选运行版本与 Setup complete" loading="lazy" decoding="async">
                 <figcaption>初始化窗口出现 Setup complete 后再关闭。</figcaption>
               </figure>
             </div>
@@ -157,8 +156,8 @@
               <div class="code-block"><pre><code>chmod +x platforms/macos/init.command platforms/macos/start.command
 ./platforms/macos/init.command</code></pre><button class="copy-button" type="button" data-copy>复制</button></div>
               <p>如果 Gatekeeper 阻止运行，可在 Finder 中右键 <code>init.command</code>，选择“打开”并确认一次。等待出现 <code>Setup complete</code>。</p>
-              <figure class="shot-placeholder" data-shot="S03">
-                <div><span>S03</span><strong>待替换：macOS 初始化完成</strong><small>需要展示终端命令与 Setup complete</small></div>
+              <figure class="guide-shot" data-shot="S03">
+                <img src="../images/S03.jpg" alt="macOS 终端显示初始化命令与 Setup complete" loading="lazy" decoding="async">
                 <figcaption>Apple Silicon Mac 会优先使用 MPS 加速。</figcaption>
               </figure>
             </div>
@@ -183,8 +182,8 @@
             <div class="choice-card"><span>单首歌曲</span><h4>Single File</h4><ol><li>点击 Browse... 选择音频</li><li>点击 Start Analysis</li><li>等待状态显示完成</li></ol></div>
             <div class="choice-card"><span>多首歌曲</span><h4>Directory</h4><ol><li>点击 Browse... 选择目录</li><li>选择是否递归子目录</li><li>点击 Start Directory Analysis</li></ol></div>
           </div>
-          <figure class="shot-placeholder" data-shot="S04">
-            <div><span>S04</span><strong>待替换：音乐分析 Web 页面</strong><small>需要同时展示 Single File 与 Directory 入口</small></div>
+          <figure class="guide-shot" data-shot="S04">
+            <img src="../images/S04.jpg" alt="音乐分析 Web 页面中的 Single File 与 Directory 分析入口" loading="lazy" decoding="async">
             <figcaption>选择最终要放入 Quest 的音频文件进行分析。</figcaption>
           </figure>
 
@@ -206,8 +205,8 @@
             <strong>便携版无法完成分析？</strong>
             <p>可以改用上游的 <a href="https://github.com/openmirlab/all-in-one-infer#readme" target="_blank" rel="noopener noreferrer">openmirlab/all-in-one-infer 工程</a>分析音乐并生成节拍数据。环境安装、音乐分析和结果导出方法，请按照该项目的 README 文档操作。</p>
           </div>
-          <figure class="shot-placeholder" data-shot="S05">
-            <div><span>S05</span><strong>待替换：分析完成与结果目录</strong><small>需要展示完成状态、JSON 下载区或 outputs/gradio 文件夹</small></div>
+          <figure class="guide-shot" data-shot="S05">
+            <img src="../images/S05.jpg" alt="音乐分析完成并生成 JSON 结果" loading="lazy" decoding="async">
             <figcaption>确认每首准备导入的歌曲都生成了同名 JSON。</figcaption>
           </figure>
         </section>
@@ -266,8 +265,8 @@
             ├─ 01 - Artist C - Song C.wav
             └─ 01 - Artist C - Song C.json</code></pre>
           </div>
-          <figure class="shot-placeholder" data-shot="S06">
-            <div><span>S06</span><strong>待替换：PC 中的 Quest 目标目录</strong><small>需要展示 Documents/FistStrikeVR/FistStrikeSongs 完整面包屑</small></div>
+          <figure class="guide-shot" data-shot="S06">
+            <img src="../images/S06.jpg" alt="PC 中 Quest 存储的 Documents、FistStrikeVR、FistStrikeSongs 目标目录" loading="lazy" decoding="async">
             <figcaption>复制的是整个根目录，不是单独的一首歌曲。</figcaption>
           </figure>
         </section>
@@ -284,12 +283,12 @@
             <li>停留在 <code>FistStrikeSongs</code> 根目录，点击“使用此文件夹”并允许访问。不要进入某个单独课程后再确认。</li>
             <li>返回游戏等待扫描完成。出现课程卡片后，点击课程即可进入训练。</li>
           </ol>
-          <figure class="shot-placeholder" data-shot="S07">
-            <div><span>S07</span><strong>待替换：Quest 系统目录选择器</strong><small>需要展示选中 FistStrikeSongs 与“使用此文件夹”按钮</small></div>
+          <figure class="guide-shot" data-shot="S07">
+            <img src="../images/S07.jpg" alt="Quest 系统目录选择器中选中 FistStrikeSongs 并显示使用此文件夹按钮" loading="lazy" decoding="async">
             <figcaption>必须选择课程文件夹的上一层根目录。</figcaption>
           </figure>
-          <figure class="shot-placeholder" data-shot="S08">
-            <div><span>S08</span><strong>待替换：游戏中的自定义课程列表</strong><small>需要展示导入帮助、选择目录、重新扫描和课程卡片</small></div>
+          <figure class="guide-shot" data-shot="S08">
+            <img src="../images/S08.jpg" alt="Fist Strike VR 自定义课程页面中的导入操作和课程卡片" loading="lazy" decoding="async">
             <figcaption>课程卡片会显示可用歌曲数、时长和 BPM 范围。</figcaption>
           </figure>
           <div class="callout"><strong>首次扫描为什么较慢？</strong><p>游戏会读取分析 JSON，并将可用歌曲复制到应用缓存。后续未改动的歌曲会复用缓存；扫描过程中请不要退出游戏。</p></div>
@@ -322,19 +321,9 @@
             <details><summary>分析 JSON 无效或歌曲无法使用</summary><div><p>删除旧 JSON，使用最新 PC 工具重新分析对应音频。不要手动改写 JSON 内容。若音频曾被替换，也应重新生成 JSON。</p></div></details>
             <details><summary>同一课程出现文件名冲突</summary><div><p>不要让两个不同格式的音频使用相同基础文件名。分别重命名音频，并重新生成与新名称匹配的 JSON。</p></div></details>
             <details><summary>扫描或缓存失败</summary><div><p>检查 Quest 可用空间，确保复制已完成，再重新扫描。必要时缩小单次课程规模并重试。</p></div></details>
+            <details><summary>分析页面显示“Analysis failed (exit code 1)”或 WinError 5</summary><div><p>如果出现如下图所示的报错，请先关闭 PC 分析工具，删除工具目录中的 <code>Portable/models</code> 文件夹，然后重新启动工具并再次分析。模型文件会重新下载，请保持网络连接并等待下载完成。</p><figure class="troubleshooting-shot"><img src="../images/error1.jpg" alt="分析页面显示 Analysis failed (exit code 1)，运行日志中包含 PermissionError 和 WinError 5"><figcaption>此类模型缓存访问错误可尝试删除 <code>Portable/models</code> 后重新分析。</figcaption></figure></div></details>
             <details><summary>PC 工具初始化或启动失败</summary><div><p>重新运行当前平台的初始化脚本，检查网络、磁盘空间和 <code>Portable/logs/</code>。Windows 的 WinError 5 请检查 UAC、Windows 安全中心和杀毒软件；macOS 权限问题可重新执行 <code>chmod +x platforms/macos/*.command</code>。</p></div></details>
             <details><summary>MP3 在 PC 工具中解码失败</summary><div><p>安装 FFmpeg，或将音频转换为 WAV/OGG 后重新分析。不要从非官方网站单独下载 DLL。</p></div></details>
-          </div>
-        </section>
-
-        <section class="guide-section screenshot-section" id="screenshots">
-          <div class="section-heading">
-            <span class="section-kicker">内容维护</span>
-            <h2>待补充的正式截图</h2>
-            <p>页面中共放置 8 个截图占位。正式截图建议使用中文界面、隐藏私人文件名和设备序列号，并尽量保持 16:9。</p>
-          </div>
-          <div class="shot-list">
-            <span>S01 GitHub 下载入口</span><span>S02 Windows 初始化完成</span><span>S03 macOS 初始化完成</span><span>S04 音乐分析 Web 页面</span><span>S05 分析结果目录</span><span>S06 Quest USB 目标目录</span><span>S07 Quest 系统目录选择器</span><span>S08 游戏课程列表</span>
           </div>
         </section>
 
