@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#071728">
-  <meta name="description" content="Fist Strike VR 自定义课程完整教程：在 PC 上分析音乐、整理课程，通过 USB 导入 Quest 并开始训练。">
-  <meta property="og:title" content="Fist Strike VR 自定义课程教程">
+  <meta name="description" content="Punchivo 自定义课程完整教程：在 PC 上分析音乐、整理课程，通过 USB 导入 Quest 并开始训练。">
+  <meta property="og:title" content="Punchivo 自定义课程教程">
   <meta property="og:description" content="用自己的音乐创建拳击训练课程。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://vic-gz.github.io/fsvr/diy/zh/">
@@ -14,16 +14,16 @@
   <link rel="alternate" hreflang="zh-CN" href="https://vic-gz.github.io/fsvr/diy/zh/">
   <link rel="stylesheet" href="../styles.css">
   <noscript><style>.tab-panel[hidden]{display:block !important}.tab-list{display:none !important}</style></noscript>
-  <title>自定义课程教程 · Fist Strike VR</title>
+  <title>自定义课程教程 · Punchivo</title>
 </head>
 <body>
   <a class="skip-link" href="#main-content">跳到正文</a>
 
   <header class="site-header">
     <a class="brand" href="#top" aria-label="返回页面顶部">
-      <span class="brand-mark" aria-hidden="true">FS</span>
+      <span class="brand-mark" aria-hidden="true">P</span>
       <span>
-        <strong>Fist Strike VR</strong>
+        <strong>Punchivo</strong>
         <small>自定义课程教程</small>
       </span>
     </a>
@@ -216,9 +216,9 @@
             <span class="step-number">3</span>
             <div><span class="section-kicker">PC 端</span><h2>整理课程目录</h2></div>
           </div>
-          <p>在 PC 上新建一个根目录，建议命名为 <code>FistStrikeSongs</code>。根目录中的每个一级子文件夹就是一个课程。</p>
+          <p>在 PC 上新建一个根目录，建议命名为 <code>PunchivoSongs</code>。根目录中的每个一级子文件夹就是一个课程。</p>
           <div class="tree-card" aria-label="正确的课程目录示例">
-            <pre><code>FistStrikeSongs/                 ← 游戏中选择这个根目录
+            <pre><code>PunchivoSongs/                   ← 游戏中选择这个根目录
 ├─ 周末燃脂/                    ← 课程 1
 │  ├─ 01 - Artist A - Song A.ogg
 │  ├─ 01 - Artist A - Song A.json
@@ -231,7 +231,7 @@
           <div class="rules-grid">
             <div><b>一个课程一个文件夹</b><p>只扫描根目录下的一级子文件夹，不要再嵌套歌曲目录。</p></div>
             <div><b>音频和 JSON 同名</b><p>扩展名之前的文件名必须相同，大小写也建议保持一致。</p></div>
-            <div><b>歌曲放在课程文件夹内</b><p>直接放在 FistStrikeSongs 根目录的歌曲不会被导入。</p></div>
+            <div><b>歌曲放在课程文件夹内</b><p>直接放在 PunchivoSongs 根目录的歌曲不会被导入。</p></div>
             <div><b>使用编号控制顺序</b><p>歌曲按文件名排序，可添加 <code>01 -</code>、<code>02 -</code> 前缀。</p></div>
           </div>
           <div class="compare-grid">
@@ -250,14 +250,14 @@
             <li>使用支持数据传输的 USB 线连接 Quest 与电脑，并保持 Quest 解锁。</li>
             <li>如果头显中出现文件访问提示，选择“允许”。</li>
             <li>在电脑文件管理器中打开 Quest 内部共享存储。</li>
-            <li>进入 <code>Documents/FistStrikeVR/</code>；目录不存在时可手动创建。</li>
-            <li>将整个 <code>FistStrikeSongs</code> 文件夹复制进去，等待传输完成后再断开 USB。</li>
+            <li>进入 <code>Documents/Punchivo/</code>；目录不存在时可手动创建。</li>
+            <li>将整个 <code>PunchivoSongs</code> 文件夹复制进去，等待传输完成后再断开 USB。</li>
           </ol>
           <div class="tree-card compact" aria-label="Quest 内的目标目录">
             <pre><code>Quest 内部存储/
 └─ Documents/
-   └─ FistStrikeVR/
-      └─ FistStrikeSongs/
+   └─ Punchivo/
+      └─ PunchivoSongs/
          ├─ 周末燃脂/
          │  ├─ 01 - Artist A - Song A.ogg
          │  └─ 01 - Artist A - Song A.json
@@ -266,8 +266,8 @@
             └─ 01 - Artist C - Song C.json</code></pre>
           </div>
           <figure class="guide-shot" data-shot="S06">
-            <img src="../images/S06.jpg" alt="PC 中 Quest 存储的 Documents、FistStrikeVR、FistStrikeSongs 目标目录" loading="lazy" decoding="async">
-            <figcaption>复制的是整个根目录，不是单独的一首歌曲。</figcaption>
+            <img src="../images/S06.jpg" alt="Quest 存储中的自定义课程目标目录" loading="lazy" decoding="async">
+            <figcaption>复制的是整个 PunchivoSongs 根目录，不是单独的一首歌曲。</figcaption>
           </figure>
         </section>
 
@@ -277,18 +277,18 @@
             <div><span class="section-kicker">Quest 游戏内</span><h2>选择目录并开始训练</h2></div>
           </div>
           <ol class="steps">
-            <li>启动 Fist Strike VR，进入“自定义课程”。</li>
+            <li>启动 Punchivo，进入“自定义课程”。</li>
             <li>点击右上方“选择目录”。</li>
-            <li>在系统目录选择器中进入 <code>Documents/FistStrikeVR/FistStrikeSongs</code>。</li>
-            <li>停留在 <code>FistStrikeSongs</code> 根目录，点击“使用此文件夹”并允许访问。不要进入某个单独课程后再确认。</li>
+            <li>在系统目录选择器中进入 <code>Documents/Punchivo/PunchivoSongs</code>。</li>
+            <li>停留在 <code>PunchivoSongs</code> 根目录，点击“使用此文件夹”并允许访问。不要进入某个单独课程后再确认。</li>
             <li>返回游戏等待扫描完成。出现课程卡片后，点击课程即可进入训练。</li>
           </ol>
           <figure class="guide-shot" data-shot="S07">
-            <img src="../images/S07.jpg" alt="Quest 系统目录选择器中选中 FistStrikeSongs 并显示使用此文件夹按钮" loading="lazy" decoding="async">
+            <img src="../images/S07.jpg" alt="Quest 系统目录选择器中选中 PunchivoSongs 并显示使用此文件夹按钮" loading="lazy" decoding="async">
             <figcaption>必须选择课程文件夹的上一层根目录。</figcaption>
           </figure>
           <figure class="guide-shot" data-shot="S08">
-            <img src="../images/S08.jpg" alt="Fist Strike VR 自定义课程页面中的导入操作和课程卡片" loading="lazy" decoding="async">
+            <img src="../images/S08.jpg" alt="Punchivo 自定义课程页面中的导入操作和课程卡片" loading="lazy" decoding="async">
             <figcaption>课程卡片会显示可用歌曲数、时长和 BPM 范围。</figcaption>
           </figure>
           <div class="callout"><strong>首次扫描为什么较慢？</strong><p>游戏会读取分析 JSON，并将可用歌曲复制到应用缓存。后续未改动的歌曲会复用缓存；扫描过程中请不要退出游戏。</p></div>
@@ -315,7 +315,7 @@
           </div>
           <div class="faq-list">
             <details open><summary>电脑中看不到 Quest 存储</summary><div><p>确认 USB 线支持数据传输；保持头显解锁；在头显内允许文件访问。仍不可见时更换 USB 端口或数据线后重新连接。</p></div></details>
-            <details><summary>游戏中一个课程都没有</summary><div><p>确认选择的是 <code>FistStrikeSongs</code> 根目录，其下至少有一个一级课程文件夹；歌曲不能直接放在根目录，也不会递归扫描更深层目录。</p></div></details>
+            <details><summary>游戏中一个课程都没有</summary><div><p>确认选择的是 <code>PunchivoSongs</code> 根目录，其下至少有一个一级课程文件夹；歌曲不能直接放在根目录，也不会递归扫描更深层目录。</p></div></details>
             <details><summary>提示缺少同名分析文件</summary><div><p>检查音频与 JSON 是否位于同一课程文件夹，并确保扩展名之前完全同名。例如 <code>Song.mp3</code> 必须对应 <code>Song.json</code>。</p></div></details>
             <details><summary>提示音频格式不支持</summary><div><p>Quest 端当前只支持 MP3、WAV 和 OGG。请在 PC 上转换格式，并针对转换后的最终音频重新生成 JSON。</p></div></details>
             <details><summary>分析 JSON 无效或歌曲无法使用</summary><div><p>删除旧 JSON，使用最新 PC 工具重新分析对应音频。不要手动改写 JSON 内容。若音频曾被替换，也应重新生成 JSON。</p></div></details>
@@ -338,7 +338,7 @@
   </main>
 
   <footer class="site-footer">
-    <p>Fist Strike VR · 自定义课程教程</p>
+    <p>Punchivo · 自定义课程教程</p>
     <p><a href="https://github.com/vic-gz/AllInOneInferPortable" target="_blank" rel="noopener noreferrer">PC 分析工具</a><span>·</span><a href="#troubleshooting">故障排查</a></p>
   </footer>
 
